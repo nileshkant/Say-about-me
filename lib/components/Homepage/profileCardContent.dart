@@ -36,10 +36,7 @@ class ProfileCardContent extends StatelessWidget {
                 padding: EdgeInsets.only(top: 10),
                 child: Text(
                   profileCardData['Name'],
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: Theme.of(context).textTheme.display1,
                 ),
               ),
             ],
@@ -57,38 +54,29 @@ class ProfileCardContent extends StatelessWidget {
                         children: <Widget>[
                           Text(
                             profileCardData['gender'],
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 18.0,
-                                fontWeight: FontWeight.bold),
+                            style: Theme.of(context).textTheme.display1,
                           ),
-                          Text("Gender", style: TextStyle(color: Colors.white)),
+                          Text("Gender", style: Theme.of(context).textTheme.display3,),
                         ],
                       ),
                       Column(
                         children: <Widget>[
                           Text(
                             profileCardData['relationship'],
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 18.0,
-                                fontWeight: FontWeight.bold),
+                            style: Theme.of(context).textTheme.display1,
                           ),
-                          Text("Status", style: TextStyle(color: Colors.white)),
+                          Text("Status", style: Theme.of(context).textTheme.display3),
                         ],
                       ),
                       Column(
                         children: <Widget>[
                           Text(
                             profileCardData['experience'] + "+",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 18.0,
-                                fontWeight: FontWeight.bold),
+                            style: Theme.of(context).textTheme.display1,
                           ),
                           Text(
                             "Exp",
-                            style: TextStyle(color: Colors.white),
+                            style: Theme.of(context).textTheme.display3,
                           ),
                         ],
                       ),
@@ -103,15 +91,11 @@ class ProfileCardContent extends StatelessWidget {
                           children: <Widget>[
                             Text(
                               profileCardData['email'],
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 16.0,
-                                // fontWeight: FontWeight.bold,
-                              ),
+                              style: Theme.of(context).textTheme.display2,
                             ),
                             Text(
                               "Email",
-                              style: TextStyle(color: Colors.white),
+                              style: Theme.of(context).textTheme.display3,
                             ),
                           ],
                         ),

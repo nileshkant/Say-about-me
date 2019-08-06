@@ -3,31 +3,19 @@ import 'package:flutter/material.dart';
 class PrimaryCard extends StatelessWidget {
 
   final Widget cardContent;
-  final double cardWidth;
+  // final double cardWidth;
   final double cardHeight;
   final List<double> stops;
   final List<Color> gradientColor;
   final ValueChanged<String> parentAction;
 
-  PrimaryCard({this.cardContent, this.cardHeight, this.cardWidth, this.parentAction, this.stops, this.gradientColor});
+  PrimaryCard({this.cardContent, this.cardHeight, this.parentAction, this.stops, this.gradientColor});
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15.0),
-              ),
-      child: GestureDetector(
-        onTap: () {
-          parentAction("Update from Child 1");
-          // print('Card tapped.');
-        },
-        child: Container(
-          // width: cardWidth,
+    return Container(
           height: cardHeight,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(15.0)),
-            // Box decoration takes a gradient
             gradient: LinearGradient(
               // Where the linear gradient begins and ends
               begin: Alignment.topRight,
@@ -38,8 +26,6 @@ class PrimaryCard extends StatelessWidget {
             ),
           ),
           child: cardContent
-        ),
-      ),
-    );
+        );
   }
 }
